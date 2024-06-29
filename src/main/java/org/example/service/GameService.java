@@ -7,7 +7,7 @@ import org.example.util.Dice;
 
 import java.util.List;
 
-public class GameService implements Game{
+public class GameService implements Game {
     private final PlayerRepo playerRepo;
     private final Dice attackingDice;
     private final Dice defendingDice;
@@ -20,11 +20,14 @@ public class GameService implements Game{
 
     @Override
     public void addPlayer(List<String> token) {
-         if(token.size() !=4) throw  new InvalidGame("please include player all 3 attributes");
-         int health=Integer.parseInt(token.get(1));
-        int strength=Integer.parseInt(token.get(2));
-        int attack=Integer.parseInt(token.get(3));
-        playerRepo.addPlayer(new Player(health,strength,attack));
+        if (token.size() != 4) {
+            throw new InvalidGame("Please include all 3 player attributes");
+        }
+
+        int health = Integer.parseInt(token.get(1));
+        int strength = Integer.parseInt(token.get(2));
+        int attack = Integer.parseInt(token.get(3));
+        playerRepo.addPlayer(new Player(health, strength, attack));
     }
 
     @Override
@@ -72,5 +75,4 @@ public class GameService implements Game{
         int damage = attack * attackingDice.roll() - defense * defendingDice.roll();
         return Math.max(damage, 0); // Ensure that damage is not negative
     }
-
 }
