@@ -12,6 +12,7 @@ public class PlayerRepo {
         playerList=new ArrayList<>();
     }
     public void addPlayer(Player player){
+
         this.playerList.add(player);
     }
     public List<Player>getPlayerList(){

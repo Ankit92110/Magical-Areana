@@ -11,6 +11,15 @@ public class Player {
         this.attack = attack;
     }
 
+    @Override
+    public String toString() {
+        return "Player{" +
+                "health=" + health +
+                ", strength=" + strength +
+                ", attack=" + attack +
+                '}';
+    }
+
     public int getHealth() {
         return health;
     }
