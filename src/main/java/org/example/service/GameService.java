@@ -18,6 +18,11 @@ public class GameService implements Game{
     }
 
     @Override
+    public void addPlayer(List<String> token) {
+
+    }
+
+    @Override
     public void play() {
 
     }

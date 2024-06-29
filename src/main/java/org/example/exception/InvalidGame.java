@@ -5,7 +5,6 @@ public class InvalidGame extends RuntimeException {
     public InvalidGame() {
         super();
     }
-
     // Constructor that accepts a custom error message
     public InvalidGame(String msg) {
         super(msg);
