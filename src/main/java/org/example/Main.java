@@ -14,10 +14,8 @@ public class Main {
         // Game Setup
         GameConfig gameConfig = GameConfig.getInstance();
         CommandRegistry commandRegistry = gameConfig.getCommandRegistry();
-
         // Determine the filename
         String fileName = args.length > 0 ? args[0] : "sample_input/input1.txt";
-
         // Read the file and execute commands
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             String line;
