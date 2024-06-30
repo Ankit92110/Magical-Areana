@@ -34,9 +34,9 @@ public class GameService implements Game {
     public void play() {
         List<Player> playerList = playerRepo.getPlayerList();
         validatePlayers(playerList);
-
-        Player player1 = playerList.get(0);
-        Player player2 = playerList.get(1);
+        int n=playerList.size();
+        Player player1 = playerList.get(n-2);
+        Player player2 = playerList.get(n-1);
 
         String winner = decideWinner(player1, player2);
         System.out.println(winner);
