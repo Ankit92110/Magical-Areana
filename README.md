@@ -26,7 +26,7 @@ Players take turns attacking and defending until one player's health reaches zer
 
 To run the game, use the following command:
 
-./gradlew run --args="sample_input/input1.txt"
+.\gradlew run --args="sample_input/input1.txt"
 
 or you can create your own input file inside same_input folder and pass that one
 
@@ -44,7 +44,10 @@ PLAY
 
 ### Running Tests
 To run the test cases, use the following command:
-./gradlew test
+.\gradlew test
+
+Or 
+Run via go inside Test and click on run button
 
 magical-arena/
 |
